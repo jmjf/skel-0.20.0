@@ -1,17 +1,10 @@
-import 'bootstrap';
+import 'github:twbs/bootstrap@3.3.5';
 
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
     .developmentLogging()
-    .plugin('jmjf/aurelia-bs-grid')
-    ;
+    .plugin('jmjf/aurelia-bs-grid');
 
-  //Uncomment the line below to enable animation.
-  //aurelia.use.plugin('aurelia-animator-css');
-
-  //Anyone wanting to use HTMLImports to load views, will need to install the following plugin.
-  //aurelia.use.plugin('aurelia-html-import-template-loader')
-
-  aurelia.start().then(a => a.setRoot());
+  aurelia.start().then(a => a.setRoot('app'));
 }
